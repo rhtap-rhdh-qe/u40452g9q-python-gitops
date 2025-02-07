@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: u40452g9q-python-gitops
+  description: This is GitOps manifest for u40452g9q-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=u40452g9q-python
+    backstage.io/kubernetes-id: u40452g9q-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: u40452g9q-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:u40452g9q-python
